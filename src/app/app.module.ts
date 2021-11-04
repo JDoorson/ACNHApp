@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HomeModule } from './home/home.module';
 import { CollectableModule } from './collectable/collectable.module';
 import { ItemModule } from './item/item.module';
 import { VillagerModule } from './villager/villager.module';
@@ -15,6 +16,7 @@ import { VillagerModule } from './villager/villager.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HomeModule,
     CollectableModule,
     ItemModule,
     VillagerModule,
