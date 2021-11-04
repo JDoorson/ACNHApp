@@ -1,1 +1,6 @@
-<p>villager-list works!</p>
+<h2>Villagers</h2>
+<ul>
+    <li *ngFor="let villager of villagers">
+        <app-villager-list-item [villager]="villager"></app-villager-list-item>
+    </li>
+</ul>
