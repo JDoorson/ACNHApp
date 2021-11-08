@@ -1,1 +1,6 @@
-<p>collectable-fossil works!</p>
+<h2>Fossils</h2>
+<ul>
+    <li *ngFor="let fossil of fossils">
+        <strong>{{fossil.name['name-USen']}}</strong> - {{fossil['museum-phrase']}}
+    </li>
+</ul>
