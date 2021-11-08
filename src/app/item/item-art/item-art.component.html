@@ -1,1 +1,6 @@
-<p>item-art works!</p>
+<h2>Art</h2>
+<ul>
+    <li *ngFor="let art of allArt">
+        <strong>{{art.name['name-USen']}}</strong> - {{art['museum-desc']}}
+    </li>
+</ul>
