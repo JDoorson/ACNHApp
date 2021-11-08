@@ -1,1 +1,6 @@
-<p>collectable-bug works!</p>
+<h2>Bugs</h2>
+<ul>
+    <li *ngFor="let bug of bugs">
+        <strong>{{bug.name['name-USen']}}</strong> - {{bug['catch-phrase']}}
+    </li>
+</ul>
