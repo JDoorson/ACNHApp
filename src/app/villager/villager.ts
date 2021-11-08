@@ -6,4 +6,5 @@ export interface Villager {
     }
     personality: string,
     saying: string,
+    'catch-phrase': string,
 }

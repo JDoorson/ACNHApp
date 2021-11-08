@@ -1,1 +1,6 @@
-<p>collectable-fish works!</p>
+<h2>Fish</h2>
+<ul>
+    <li *ngFor="let fish of fishes">
+        <strong>{{fish.name['name-USen']}}</strong> - {{fish['catch-phrase']}}
+    </li>
+</ul>
