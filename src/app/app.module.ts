@@ -12,7 +12,7 @@ import { VillagerModule } from './villager/villager.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

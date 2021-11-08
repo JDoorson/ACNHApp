@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { VillagerListComponent } from './villager-list/villager-list.component';
 
 const routes: Routes = [
-  { path: 'villager/list', component: VillagerListComponent },
+  { path: 'villager', component: VillagerListComponent },
 ];
 
 @NgModule({

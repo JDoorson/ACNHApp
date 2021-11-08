@@ -13,8 +13,8 @@ export class VillagerListComponent implements OnInit {
   ngOnInit() {
     this.villagerService
       .getVillagers()
+      .subscribe(data => {this.villagers = Object.values(data)});
       //.subscribe((data: Villager[]) => this.villagers = { ...data });
-      .subscribe(data => {this.villagers = Object.values(data);console.log(Object.values(data));});
   }
 
   constructor(private villagerService: VillagerService) {}
