@@ -16,7 +16,7 @@ export class CollectableService {
     return this.http.get<any>('https://acnhapi.com/v1/bugs/{id}');
   }
 
-  getAllFish() {
+  getFishes() {
     return this.http.get<any>('https://acnhapi.com/v1/fish');
   }
 

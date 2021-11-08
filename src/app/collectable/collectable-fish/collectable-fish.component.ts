@@ -13,7 +13,7 @@ export class CollectableFishComponent implements OnInit {
 
   ngOnInit() {
     this.collectableService
-      .getAllFish()
+      .getFishes()
       .subscribe(data => { this.fishes = Object.values(data) });
   }
 
