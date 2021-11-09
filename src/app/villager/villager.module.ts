@@ -5,7 +5,7 @@ import { VillagerRoutingModule } from './villager-routing.module';
 import { VillagerListComponent } from './villager-list/villager-list.component';
 import { VillagerListItemComponent } from './villager-list-item/villager-list-item.component';
 import { VillagerService } from './villager.service';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { VillagerService } from './villager.service';
   ],
   imports: [
     CommonModule,
-    VillagerRoutingModule
+    VillagerRoutingModule,
+    MatGridListModule,
   ],
   providers: [
     VillagerService,

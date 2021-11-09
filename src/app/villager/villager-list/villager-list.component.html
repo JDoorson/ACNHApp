@@ -1,6 +1,6 @@
 <h2>Villagers</h2>
-<ul>
-    <li *ngFor="let villager of villagers">
+<mat-grid-list cols="5" rowHeight="1:2">
+    <mat-grid-tile *ngFor="let villager of villagers">
         <app-villager-list-item [villager]="villager"></app-villager-list-item>
-    </li>
-</ul>
+    </mat-grid-tile>
+</mat-grid-list>
