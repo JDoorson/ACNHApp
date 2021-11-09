@@ -9,6 +9,7 @@ import { HomeModule } from './home/home.module';
 import { CollectableModule } from './collectable/collectable.module';
 import { ItemModule } from './item/item.module';
 import { VillagerModule } from './villager/villager.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { VillagerModule } from './villager/villager.module';
     CollectableModule,
     ItemModule,
     VillagerModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
