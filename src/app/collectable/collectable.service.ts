@@ -1,34 +1,43 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 @Injectable()
 export class CollectableService {
+  private readonly apiPath: string = environment.apiBaseUrl;
+
   constructor(private http: HttpClient) { }
 
   getBugs() {
-    return this.http.get<any>('https://acnhapi.com/v1/bugs');
+    return this.http.get<any>(
+      `${this.apiPath}/bugs`);
   }
 
-  getBug(id: number) {
-    return this.http.get<any>('https://acnhapi.com/v1/bugs/{id}');
+  getBug(bugId: number) {
+    return this.http.get<any>(
+      `${this.apiPath}/bugs/${bugId}`);
   }
 
   getFishes() {
-    return this.http.get<any>('https://acnhapi.com/v1/fish');
+    return this.http.get<any>(
+      `${this.apiPath}/fish`);
   }
 
-  getFish(id: number) {
-    return this.http.get<any>('https://acnhapi.com/v1/fish/{id}');
+  getFish(fishId: number) {
+    return this.http.get<any>(
+      `${this.apiPath}/fish/${fishId}`);
   }
 
   getFossils() {
-    return this.http.get<any>('https://acnhapi.com/v1/fossils');
+    return this.http.get<any>(
+      `${this.apiPath}/fossils`);
   }
 
-  getFossil(name: string) {
-    return this.http.get<any>('https://acnhapi.com/v1/fossils/{name}');
+  getFossil(fossilName: string) {
+    return this.http.get<any>(
+      `${this.apiPath}/fossils/${fossilName}`);
   }
 }
