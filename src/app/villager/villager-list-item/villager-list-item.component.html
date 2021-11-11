@@ -1,7 +1,7 @@
 <div *ngIf="villager">
     <img [src]="villager.image_uri">
     <div>
-        <strong>{{villager.name['name-USen']}}</strong>
-        <p>{{villager.saying}}</p>
+        <p class="villagerName">{{villager.name['name-USen']}}</p>
+        <p class="villagerSaying"><q><i>{{villager.saying}}</i></q></p>
     </div>
 </div>

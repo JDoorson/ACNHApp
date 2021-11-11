@@ -1,0 +1,15 @@
+img {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width:90%;
+    height:70%;
+}
+
+.villagerName {
+    font-size: 20px;
+}
+
+.villagerName, .villagerSaying {
+    text-align: center;
+}
