@@ -13,12 +13,12 @@ export class VillagerDialogComponent implements OnInit {
 
   constructor(
     private villagerService: VillagerService,
-    @Inject(MAT_DIALOG_DATA) public villagerId: number
+    @Inject(MAT_DIALOG_DATA) public data: number
   ) { }
 
   ngOnInit() {
     this.villagerService
-      .getVillager(this.villagerId)
+      .getVillager(this.data)
       .subscribe(data => { this.villager = data });
   }
 }

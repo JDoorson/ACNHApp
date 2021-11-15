@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Villager } from '../villager';
 import { VillagerService } from '../villager.service';
+import { MatDialog } from '@angular/material/dialog';
+import { VillagerDialogComponent } from '../villager-dialog/villager-dialog.component';
 
 @Component({
   selector: 'app-villager-list',
@@ -8,7 +10,12 @@ import { VillagerService } from '../villager.service';
   styleUrls: ['./villager-list.component.css']
 })
 export class VillagerListComponent implements OnInit {
-  villagers: Villager[] | undefined;
+  villagers?: Villager[];
+
+  constructor(
+    private villagerService: VillagerService,
+    public dialog: MatDialog,
+  ) {}
 
   ngOnInit() {
     this.villagerService
@@ -16,5 +23,10 @@ export class VillagerListComponent implements OnInit {
       .subscribe(data => { this.villagers = Object.values(data) });
   }
 
-  constructor(private villagerService: VillagerService) {}
+  onClick(villagerId: number) {
+    console.log(`OnClick even worked with Id: ${villagerId}`);
+    this.dialog.open(VillagerDialogComponent, {
+      data: villagerId,
+    })
+  }
 }

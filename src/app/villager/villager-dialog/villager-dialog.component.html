@@ -1,4 +1,8 @@
-<h1 mat-dialog-title>Villager Name :)</h1>
-<div mat-dialog-content>
-    <p>Villager content :)</p>
+<div *ngIf="villager">
+    <h1>{{ villager.name['name-USen'] }}</h1>
+    <img [src]="villager.image_uri">
+    <div>
+        <p class="villagerSaying"><q><i>{{villager.saying}}</i></q></p>
+        <p [innerHtml]="villager['birthday-string'] | superscriptDate"></p>
+    </div>
 </div>
