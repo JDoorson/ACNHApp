@@ -1,8 +1,21 @@
 <div *ngIf="villager">
-    <h1>{{ villager.name['name-USen'] }}</h1>
+    <div *ngIf="villager.gender == 'Male'; then renderMale else renderFemale"></div>
+    <ng-template #renderMale>
+        <h1 class="villagerName">
+            {{ villager.name['name-USen'] }}
+            <mat-icon class="blue-icon">male</mat-icon>
+        </h1>
+    </ng-template>
+    <ng-template #renderFemale>
+        <h1>
+            {{ villager.name['name-USen'] }}
+            <mat-icon class="pink-icon">female</mat-icon>
+        </h1>
+    </ng-template>
+    <mat-icon class="floatLeft">cake</mat-icon>
+    <p class="villagerBirthday" [innerHtml]="villager['birthday-string'] | superscriptDate"></p>
     <img [src]="villager.image_uri">
     <div>
         <p class="villagerSaying"><q><i>{{villager.saying}}</i></q></p>
-        <p [innerHtml]="villager['birthday-string'] | superscriptDate"></p>
     </div>
 </div>

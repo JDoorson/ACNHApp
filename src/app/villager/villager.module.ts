@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 import { VillagerRoutingModule } from './villager-routing.module';
 import { VillagerListComponent } from './villager-list/villager-list.component';
@@ -22,7 +23,8 @@ import { SuperscriptDatePipe } from '../superscript-date.pipe';
     CommonModule,
     VillagerRoutingModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
   ],
   providers: [
     VillagerService,

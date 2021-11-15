@@ -1,0 +1,20 @@
+.villagerName {
+    margin-bottom: 0;
+}
+
+.villagerBirthday {
+    font-size: smaller;
+    margin-bottom: 0;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.blue-icon {
+    color: lightblue;
+}
+
+.pink-icon {
+    color: pink;
+}
