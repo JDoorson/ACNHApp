@@ -6,11 +6,13 @@ import { VillagerListComponent } from './villager-list/villager-list.component';
 import { VillagerListItemComponent } from './villager-list-item/villager-list-item.component';
 import { VillagerService } from './villager.service';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { VillagerDialogComponent } from './villager-dialog/villager-dialog.component';
 
 @NgModule({
   declarations: [
     VillagerListComponent,
-    VillagerListItemComponent
+    VillagerListItemComponent,
+    VillagerDialogComponent
   ],
   imports: [
     CommonModule,
