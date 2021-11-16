@@ -1,13 +1,13 @@
-.villagerName {
+p.no-margin {
     margin-bottom: 0;
 }
 
-.villagerBirthday {
+.vil-bday {
     font-size: smaller;
     margin-bottom: 0;
 }
 
-.floatLeft {
+.float-left {
     float: left;
 }
 

@@ -1,14 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core'
 
 /**
- * Take a string in the following format:
- *  September 21st
- * And return HTML which superscripts the final two characters.
+ * Take a string in the following format of 'September 21st'
+ * and returns HTML which superscripts the final two characters.
  * Usage:
  *  value | superscriptDate
  * Example:
  *  {{ "September 21st" | superscriptDate }}
- *  returns: September 21<sup>st</sup>
+ *  returns: "September 21<sup>st</sup>"
  */
 @Pipe({name: 'superscriptDate'})
 export class SuperscriptDatePipe implements PipeTransform {
